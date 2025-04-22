@@ -23,7 +23,6 @@ func main() {
 	}
 
 	
-	http.HandleFunc("/", handlers.HandleFrontend)
 	http.HandleFunc("/api/v1/calculate", handlers.HandleCalculate)
 	http.HandleFunc("/api/v1/expressions", handlers.HandleGetExpressions)
 	http.HandleFunc("/api/v1/expressions/", handlers.HandleGetExpression)
