@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/unethiqual/CALC_PROJ/config"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/config"
 	"github.com/unethiqual/CALC_PROJ/orchestrator/handlers"
 	"github.com/unethiqual/CALC_PROJ/orchestrator/scheduler"
 	"log"
