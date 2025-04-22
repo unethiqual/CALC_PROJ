@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"DistributedArithmeticExpressionCalculator/agent/client"
+	"github.com/unethiqual/CALC_PROJ/agent/client"
 )
 
 func worker() {

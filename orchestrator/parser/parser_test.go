@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"DistributedArithmeticExpressionCalculator/orchestrator/models"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/models"
 	"DistributedArithmeticExpressionCalculator/orchestrator/parser"
 )
 

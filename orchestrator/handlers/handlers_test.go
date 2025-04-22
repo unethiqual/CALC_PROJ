@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"testing"
 
-	"DistributedArithmeticExpressionCalculator/orchestrator/handlers"
-	"DistributedArithmeticExpressionCalculator/orchestrator/models"
-	"DistributedArithmeticExpressionCalculator/orchestrator/parser"
-	"DistributedArithmeticExpressionCalculator/orchestrator/scheduler"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/handlers"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/models"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/parser"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/scheduler"
 )
 
 func TestHandleCalculate(t *testing.T) {

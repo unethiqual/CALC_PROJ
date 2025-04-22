@@ -1,9 +1,9 @@
 package main
 
 import (
-	"DistributedArithmeticExpressionCalculator/orchestrator/config"
-	"DistributedArithmeticExpressionCalculator/orchestrator/handlers"
-	"DistributedArithmeticExpressionCalculator/orchestrator/scheduler"
+	"github.com/unethiqual/CALC_PROJ/config"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/handlers"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/scheduler"
 	"log"
 	"net/http"
 	"os"

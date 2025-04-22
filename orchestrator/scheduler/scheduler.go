@@ -1,15 +1,14 @@
 package scheduler
 
 import (
-	"DistributedArithmeticExpressionCalculator/orchestrator/config"
-	"DistributedArithmeticExpressionCalculator/orchestrator/models"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/config"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/models"
 	"os"
 	"strconv"
 )
 
 var GlobalConfig *config.Config
 
-// ScheduleTasks проходит по AST и, если для узла доступны оба аргумента, добавляет задачу в очередь.
 func ScheduleTasks(node *models.Node, exprID int64) {
 	if node == nil {
 		return

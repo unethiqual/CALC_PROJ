@@ -3,9 +3,9 @@ package scheduler_test
 import (
 	"testing"
 
-	"DistributedArithmeticExpressionCalculator/orchestrator/models"
-	"DistributedArithmeticExpressionCalculator/orchestrator/parser"
-	"DistributedArithmeticExpressionCalculator/orchestrator/scheduler"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/models"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/parser"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/scheduler"
 )
 
 func TestScheduleAndUpdateAST(t *testing.T) {

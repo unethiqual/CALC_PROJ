@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"DistributedArithmeticExpressionCalculator/orchestrator/models"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/models"
 )
 
 // Tokenize разбивает входное выражение на токены.

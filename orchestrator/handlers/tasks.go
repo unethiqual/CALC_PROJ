@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"DistributedArithmeticExpressionCalculator/orchestrator/models"
-	"DistributedArithmeticExpressionCalculator/orchestrator/scheduler"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/models"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/scheduler"
 	"encoding/json"
 	"net/http"
 )
