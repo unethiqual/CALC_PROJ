@@ -11,7 +11,6 @@ const (
 	StatusCompleted  ExpressionStatus = "completed"
 )
 
-// Expression хранит исходное выражение, его статус и результат
 type Expression struct {
 	ID     int64            `json:"id"`
 	Expr   string           `json:"expression"`
@@ -20,7 +19,6 @@ type Expression struct {
 	Root   *Node            `json:"-"`
 }
 
-// Task представляет операцию над двумя аргументами, которую должен выполнить агент
 type Task struct {
 	ID            int64   `json:"id"`
 	ExpressionID  int64   `json:"-"`
@@ -30,7 +28,6 @@ type Task struct {
 	OperationTime int     `json:"operation_time"`
 }
 
-// Node – узел дерева арифметического выражения (если Operator пустой, то это число)
 type Node struct {
 	Operator string  // например, "+", "-", "*" или "/"
 	Value    float64 // значение, если вычислено
@@ -41,7 +38,6 @@ type Node struct {
 	Parent   *Node // для отслеживания зависимости
 }
 
-// Глобальные переменные (in-memory хранилище)
 var (
 	ExprIDCounter int64 = 1
 	TaskIDCounter int64 = 1

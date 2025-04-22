@@ -5,10 +5,9 @@ import (
 	"testing"
 
 	"github.com/unethiqual/CALC_PROJ/orchestrator/models"
-	"DistributedArithmeticExpressionCalculator/orchestrator/parser"
+	"github.com/unethiqual/CALC_PROJ/orchestrator/parser"
 )
 
-// evaluate recursively computes the value of an AST node.
 func evaluate(node *models.Node) (float64, error) {
 	if node == nil {
 		return 0, fmt.Errorf("nil node")

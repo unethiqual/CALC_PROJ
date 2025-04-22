@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-	// Попытка загрузить конфигурацию из файла config.json
 	if _, err := os.Stat("config.json"); err == nil {
 		cfg, err := config.LoadConfig("config.json")
 		if err != nil {

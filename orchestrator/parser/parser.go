@@ -8,8 +8,6 @@ import (
 	"github.com/unethiqual/CALC_PROJ/orchestrator/models"
 )
 
-// Tokenize разбивает входное выражение на токены.
-// Поддерживаются числа, операторы и скобки; пробелы игнорируются.
 func Tokenize(expr string) []string {
 	var tokens []string
 	var number strings.Builder
@@ -28,7 +26,7 @@ func Tokenize(expr string) []string {
 			if strings.ContainsRune("+-*/()", ch) {
 				tokens = append(tokens, string(ch))
 			} else {
-				return nil // обнаружен недопустимый символ
+				return nil
 			}
 		}
 	}
@@ -52,7 +50,6 @@ func precedence(op string) int {
 	return 0
 }
 
-// ParseExpression преобразует строковое выражение в AST.
 func ParseExpression(expr string) (*models.Node, error) {
 	tokens := Tokenize(expr)
 	if tokens == nil || len(tokens) == 0 {
@@ -64,7 +61,6 @@ func ParseExpression(expr string) (*models.Node, error) {
 
 	for _, token := range tokens {
 		if isOperator(token) {
-			// Если оператор, проверяем приоритеты
 			for len(opStack) > 0 {
 				top := opStack[len(opStack)-1]
 				if isOperator(top) && precedence(top) >= precedence(token) {
@@ -100,7 +96,6 @@ func ParseExpression(expr string) (*models.Node, error) {
 					foundParen = true
 					break
 				}
-				// top — оператор, создаём узел
 				if len(outputQueue) < 2 {
 					return nil, fmt.Errorf("некорректное выражение")
 				}
@@ -121,7 +116,6 @@ func ParseExpression(expr string) (*models.Node, error) {
 				return nil, fmt.Errorf("скобки не сбалансированы")
 			}
 		} else {
-			// Токен должен быть числом
 			val, err := strconv.ParseFloat(token, 64)
 			if err != nil {
 				return nil, fmt.Errorf("некорректное число: %s", token)
@@ -134,7 +128,6 @@ func ParseExpression(expr string) (*models.Node, error) {
 		}
 	}
 
-	// Обработка оставшихся операторов
 	for len(opStack) > 0 {
 		top := opStack[len(opStack)-1]
 		opStack = opStack[:len(opStack)-1]

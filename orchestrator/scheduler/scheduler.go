@@ -79,7 +79,6 @@ func getOperationTime(op string) int {
 	}
 }
 
-// ScheduleReadyTasks создаёт задачи для узлов, готовых к вычислению.
 func ScheduleReadyTasks(node *models.Node, exprID int64) {
 	if node == nil {
 		return
@@ -105,7 +104,6 @@ func ScheduleReadyTasks(node *models.Node, exprID int64) {
 	ScheduleReadyTasks(node.Right, exprID)
 }
 
-// UpdateASTWithTask обновляет AST выражения по результату выполнения задачи.
 func UpdateASTWithTask(expr *models.Expression, taskID int64, result float64) bool {
 	found := false
 	var traverse func(node *models.Node)

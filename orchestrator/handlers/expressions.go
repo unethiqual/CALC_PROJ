@@ -10,7 +10,6 @@ import (
 	"strings"
 )
 
-// HandleCalculate – обработчик POST /api/v1/calculate
 func HandleCalculate(w http.ResponseWriter, r *http.Request) {
 	type Request struct {
 		Expression string `json:"expression"`
